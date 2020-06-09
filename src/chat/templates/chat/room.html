@@ -40,7 +40,9 @@
             const messageInputDom = document.querySelector('#chat-message-input');
             const message = messageInputDom.value;
             chatSocket.send(JSON.stringify({
-                'message': message
+                'message': message,
+                // This command will handle a one-line command from consumers.py self.commands[data['command']](self, data) in def receive
+                'command': 'new_message'
             }));
             messageInputDom.value = '';
         };
