@@ -1,3 +1,4 @@
+// Reconnecting websocket library:  https://github.com/joewalnes/reconnecting-websocket
 (function (global, factory) {
   if (typeof define === 'function' && define.amd) {
     define([], factory)
