@@ -3,7 +3,7 @@ from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 import json
 
-from .models import Message 
+from .models import Message
 
 User = get_user_model()
 
@@ -27,7 +27,7 @@ class ChatConsumer(WebsocketConsumer):
           'message': self.message_to_json(message)
         }
         return self.message_to_json(message)
-        
+
     def messages_to_json(self, messages):
         result = []
         for message in messages:
